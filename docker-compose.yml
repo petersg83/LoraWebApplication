@@ -1,0 +1,13 @@
+front:
+    build: ./docker/front
+    ports:
+        - 3000:3000
+    command: run start
+    volumes:
+        - .:/project
+
+npm:
+    build: ./docker/front
+    command: --help
+    volumes:
+        - .:/project
